@@ -11,8 +11,8 @@ def get_news(ticker_list,start,end):
 
     headers = {
         "accept": "application/json",
-        "APCA-API-KEY-ID": "PKQWXGFE14OPQE8M0VIN",
-        "APCA-API-SECRET-KEY": "d6CjPOCYpjg1as2nab6PP1iCYmOvqv6FvrzVKJS4"
+        "APCA-API-KEY-ID": "REDACTED",
+        "APCA-API-SECRET-KEY": "REDACTED"
     }
 
     response = requests.get(url, headers=headers)

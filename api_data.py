@@ -1,7 +1,9 @@
 # api_data.py
 import requests
 import json
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 def get_news(ticker_list,start,end):
     symbols=ticker_list
     limit=5
@@ -11,8 +13,8 @@ def get_news(ticker_list,start,end):
 
     headers = {
         "accept": "application/json",
-        "APCA-API-KEY-ID": "REDACTED",
-        "APCA-API-SECRET-KEY": "REDACTED"
+        "APCA-API-KEY-ID": os.getenv("API-KEY-ID"),
+        "APCA-API-SECRET-KEY": os.getenv("API-SECRET-KEY")
     }
 
     response = requests.get(url, headers=headers)
